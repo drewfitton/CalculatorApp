@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct CalculatorAppApp: App {
+struct CalculatorApp: App {
+    @StateObject private var calcValues = CalculatorValues()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(calcValues: calcValues)
         }
     }
 }
